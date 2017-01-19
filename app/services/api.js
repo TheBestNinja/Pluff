@@ -136,8 +136,8 @@ export default function ($http, $auth, $q, ngDialog, SatellizerUtils) {
     getRoomOccupancy(date) {
       return get(`/rooms/occupancy/${date}`);
     },
-    getPicture(id, size) {
-      return get(`/pictures/${id}/${size}`, {
+    getPicture(id) {
+      return get(`/pictures/${id}.jpg`, {
         responseType: 'blob',
       });
     },
