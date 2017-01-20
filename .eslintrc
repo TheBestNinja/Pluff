@@ -1,7 +1,13 @@
 {
   "extends": "codeyellow",
   "rules": {
-    "indent": [2, 2, {"SwitchCase": 1}]
+    "indent": [2, 2, {"SwitchCase": 1}],
+
+    //TODO: Please take the following rules into consideration.
+    "no-bitwise": "off",
+    "no-plusplus": "off",
+    "operator-assignment": "off",
+    "arrow-parens": "off"
   },
   "globals": {
     "_": true,
