@@ -16,10 +16,10 @@ export default function ($log, $q, apiService) {
             if (!(filterRooms.indexOf(room.roomId) > -1)) {
               // Loop trough all hours and check if the room is free on that hour
               // Return true if the room is occupied
-              for (let hour = 1; hour < 15; hour++) {
+              for (let hour = 1; hour < 15; hour += 1) {
                 const hourExp = Math.pow(2, hour - 1);
 
-                if (room.mask & hourExp) {
+                if (room.mask & hourExp) { // eslint-disable-line no-bitwise
                   hourData.push(true);
                 } else {
                   hourData.push(false);

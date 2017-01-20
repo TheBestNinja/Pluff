@@ -23,7 +23,7 @@ export default function ($scope, $http, lessonService, $window, $location, $inte
   }
 
   function fetchTimetable(date) {
-    return apiService.getTimeTable(timetableInfo.url, date).then((payload) =>
+    return apiService.getTimeTable(timetableInfo.url, date).then(payload =>
       parseTimetable(timetableInfo.kind, payload.data)
     , failedTimetable);
   }

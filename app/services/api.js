@@ -85,7 +85,7 @@ export default function ($http, $auth, $q, ngDialog) {
         });
 
         // Forward the authPromise.
-        return dialog.closePromise.then((closedDialog) => closedDialog.value);
+        return dialog.closePromise.then(closedDialog => closedDialog.value);
       }
       // The user is already in the app, so show him the auth directly.
       return showAuthPopup();
