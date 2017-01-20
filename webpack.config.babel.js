@@ -52,7 +52,7 @@ export default {
   entry: {
     bundle: 'boot.js',
   },
-  devtool: IS_DEBUG ? '#eval' : null,
+  devtool: IS_DEBUG ? '#eval' : false,
   output: {
     filename: '[name]-[hash:7].js',
     chunkFilename: '[name]-[id]-[chunkhash:7].js',
