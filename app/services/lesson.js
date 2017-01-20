@@ -20,7 +20,7 @@ export default function () {
   data.setInfo = function (title, kind) {
     tableInfo = {
       // We only want a small part of the title.
-      title: title ? title.replace(/Rooster |Schedule /, '').replace(/\((.*)\)$/, '') : '',
+      title: title ? title.replace(/Persoonlijk\srooster |Schedule /, '') : '',
       kind,
     };
 
@@ -37,7 +37,7 @@ export default function () {
 
     day.forEach((hour) => {
       const hourCount = parseInt(hour.lessons.length);
-      totalLessons = totalLessons + hourCount;
+      totalLessons += hourCount;
     });
 
     return totalLessons;
@@ -50,7 +50,7 @@ export default function () {
     }
     // The API returns multiple weeks around the current school week,
     // so try to find the right one.
-    const schoolWeek = weeks.find((week) =>
+    const schoolWeek = weeks.find(week =>
       currentDate.isSame(week.start)
     );
     return schoolWeek && schoolWeek.title;
@@ -72,7 +72,7 @@ export default function () {
       const hourLength = lesson.hoursMask.toString(2).length;
 
       // Iterate over every possible hour and check if there's a lesson in it
-      for (let hourNumber = 1; hourNumber <= hourLength; hourNumber++) {
+      for (let hourNumber = 1; hourNumber <= hourLength; hourNumber += 1) {
         // Get the exponent of the hourNumber (current hour) (^2 - 1)
         // Equalize the current hour with the mask
         const hourExp = Math.pow(2, hourNumber - 1);
@@ -80,7 +80,7 @@ export default function () {
         // Check if the current hour (hourNumber) is in the mask
         // And if the subject isn't in the filterSubjects array
         // Ex.: if a mask is 12, the binary code of it is 1100. This means that the lesson is in the third and fourth hour
-        if (lesson.hoursMask & hourExp && !(filterSubjects.indexOf(lesson.subject) > -1)) {
+        if (lesson.hoursMask & hourExp && !(filterSubjects.indexOf(lesson.subject) > -1)) { // eslint-disable-line no-bitwise
           // Reformat the lesson data to include only what is needed
           const lessonData = {
             start: start.format('H:mm'),

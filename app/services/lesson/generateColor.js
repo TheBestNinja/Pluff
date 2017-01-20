@@ -3,8 +3,8 @@ export default function (name, total) {
   total = total || 4096;
 
   // Loop every character and multiply with the generator seed
-  for (let i = 0; i < name.length; i++) {
-    total = total * name.charCodeAt(i);
+  for (let i = 0; i < name.length; i += 1) {
+    total *= name.charCodeAt(i);
   }
 
   // Convert total to hex

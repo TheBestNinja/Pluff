@@ -1,7 +1,8 @@
 import moment from 'moment';
 import authenticatePartial from 'partials/dialog-authenticate.html';
+import parseQueryString from 'satellizer';
 
-export default function ($http, $auth, $q, ngDialog, SatellizerUtils) {
+export default function ($http, $auth, $q, ngDialog) {
   // When requesting an URL without user interaction, a dialog should be shown
   // to prevent the browser from blocking the popup.
   let isFirstAuthAttempt = true;
@@ -58,7 +59,7 @@ export default function ($http, $auth, $q, ngDialog, SatellizerUtils) {
     // It shouldn't happen if the window is in a popup.
     if (location.hash.startsWith('#access_token') && !window.opener) {
       const hashParams = location.hash.substring(1).replace(/\/$/, '');
-      const hash = SatellizerUtils.parseQueryString(hashParams);
+      const hash = parseQueryString(hashParams);
       console.log('Trying to use given hash to set access token', hash);
 
       $auth.setToken(hash.access_token);
@@ -84,7 +85,7 @@ export default function ($http, $auth, $q, ngDialog, SatellizerUtils) {
         });
 
         // Forward the authPromise.
-        return dialog.closePromise.then((closedDialog) => closedDialog.value);
+        return dialog.closePromise.then(closedDialog => closedDialog.value);
       }
       // The user is already in the app, so show him the auth directly.
       return showAuthPopup();
@@ -136,8 +137,8 @@ export default function ($http, $auth, $q, ngDialog, SatellizerUtils) {
     getRoomOccupancy(date) {
       return get(`/rooms/occupancy/${date}`);
     },
-    getPicture(id) {
-      return get(`/pictures/${id}.jpg`, {
+    getPicture(id, width, height, anchor, bgcolor) {
+      return get(`/pictures/${id}.jpg?width=${width}&height=${height}&anchor=${anchor}&bgcolor=${bgcolor}`, {
         responseType: 'blob',
       });
     },

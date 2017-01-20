@@ -47,7 +47,7 @@ export default function (weekService) {
       return hourBreaks;
     },
     getHourDurations() {
-      return hourNumbers.map((hour) => hour.duration);
+      return hourNumbers.map(hour => hour.duration);
     },
     getHourNumbers() {
       return hourNumbers;
