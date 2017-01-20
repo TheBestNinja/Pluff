@@ -104,7 +104,7 @@ export default function ($scope, $http, lessonService, $window, $location, $inte
   };
 
   $scope.teacherDialog = function (teacher) {
-    apiService.getPicture(teacher.id).then((payload) => {
+    apiService.getPicture(teacher.id, 250, 250, 'top', 'ffffff').then((payload) => {
       // The image is a blob; encode it to base64 so it can be put in an <img>
       const FR = new FileReader();
       FR.onload = function (e) {

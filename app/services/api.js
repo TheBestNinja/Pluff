@@ -137,8 +137,8 @@ export default function ($http, $auth, $q, ngDialog) {
     getRoomOccupancy(date) {
       return get(`/rooms/occupancy/${date}`);
     },
-    getPicture(id) {
-      return get(`/pictures/${id}.jpg`, {
+    getPicture(id, width, height, anchor, bgcolor) {
+      return get(`/pictures/${id}.jpg?width=${width}&height=${height}&anchor=${anchor}&bgcolor=${bgcolor}`, {
         responseType: 'blob',
       });
     },
