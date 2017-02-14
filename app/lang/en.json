@@ -66,5 +66,5 @@
   "FAQ_QUESTION_WHY_AUTH": "Why do I get a login screen when I open Pluff?",
   "FAQ_ANSWER_WHY_AUTH": "Pluff uses a webservice of Fontys that requires you to sign in on the FHICT portal. If you don’t want to have to sign in everytime, click on “<em>This is a private computer</em>” when signing in. It is also possible to save your credentials in your browser (many phones can do this too!).",
   "FAQ_QUESTION_HELP": "Can I help?",
-  "FAQ_ANSWER_HELP": "Yes! We would like that. Pluff is fully open-source. Please take a look at our <a href=\"https://github.com/SpaceK33z/Pluff\">Github</a>."
+  "FAQ_ANSWER_HELP": "Yes! We would like that. Pluff is fully open-source. Please take a look at our <a href=\"https://github.com/Fontys-Hogeschool-ICT/Pluff\">Github</a>."
 }

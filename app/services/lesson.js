@@ -20,7 +20,7 @@ export default function () {
   data.setInfo = function (title, kind) {
     tableInfo = {
       // We only want a small part of the title.
-      title: title ? title.replace(/Persoonlijk\srooster |Schedule /, '') : '',
+      title: title ? title.replace(/Persoonlijk\srooster |Schedule| *\([^)]*\)*/, '') : '',
       kind,
     };
 

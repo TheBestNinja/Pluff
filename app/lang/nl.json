@@ -66,5 +66,5 @@
   "FAQ_QUESTION_WHY_AUTH": "Waarom krijg ik een inlogscherm als ik Pluff open?",
   "FAQ_ANSWER_WHY_AUTH": "Omdat Pluff gebruikt maakt van een webservice van Fontys is het nodig om in te loggen op het FHICT portal. Om te voorkomen dat je steeds weer je inloggegevens moet invullen, kun je het beste bij het inloggen klikken op “<em>Dit is een privé computer</em>”. Verder is het ook aan te raden om je inloggegevens op te slaan in je browser (dit kan vaak ook op telefoons!).",
   "FAQ_QUESTION_HELP": "Kan ik helpen om Pluff beter te maken?",
-  "FAQ_ANSWER_HELP": "Ja dat kan! Graag zelfs. Pluff is volledig open-source. Bijdrages, ideëen of tips zijn altijd welkom. Kijk hiervoor op onze <a href=\"https://github.com/SpaceK33z/Pluff\">Github</a>."
+  "FAQ_ANSWER_HELP": "Ja dat kan! Graag zelfs. Pluff is volledig open-source. Bijdrages, ideëen of tips zijn altijd welkom. Kijk hiervoor op onze <a href=\"https://github.com/Fontys-Hogeschool-ICT/Pluff\">Github</a>."
 }
