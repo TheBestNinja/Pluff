@@ -17,11 +17,11 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/SpaceK33z/Pluff/issues"
+    "url": "https://github.com/Fontys-Hogeschool-ICT/Pluff/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/SpaceK33z/Pluff.git"
+    "url": "git://github.com/Fontys-Hogeschool-ICT/Pluff.git"
   },
   "dependencies": {
     "angucomplete-alt": "^3.0.0",
