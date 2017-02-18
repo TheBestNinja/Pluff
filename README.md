@@ -1,4 +1,4 @@
-Pluff — Studentenrooster
+Pluff — Studentenrooster [![Build Status](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff.svg?branch=master)](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff)
 ========================
 
 [Pluff](https://pluff.nl) is een open-source roostersysteem, gemaakt door Fontys ICT studenten. Het is onze visie, hoe het eigenlijk zou moeten. Het systeem dat door Fontys ICT zelf aangeboden wordt, is in onze ogen verouderd. We vinden het eruit zien en werken alsof het in de jaren '80 is gemaakt door een stelletje communisten. Kom op. Framesets, Comic Sans en zelfs GIF-jes met glitters. No joke.
