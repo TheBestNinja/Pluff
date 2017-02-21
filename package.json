@@ -1,9 +1,9 @@
 {
   "name": "Pluff",
-  "description": "Een betere rooster website voor Fontys ICT.",
+  "description": "Veel betere roosterwebsite voor FHICT",
   "version": "2.0.0",
   "license": "MIT",
-  "homepage": "https://pluff.iris.fhict.nl",
+  "homepage": "https://pluff.venus.fhict.nl",
   "author": {
     "name": "Kees Kluskens",
     "email": "kees@webduck.nl",
@@ -57,6 +57,7 @@
     "inquirer": "^2.0.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
+    "ncp": "^2.0.0",
     "node-sass": "^4.3.0",
     "postcss-loader": "^1.2.2",
     "raw-loader": "^0.5.1",
@@ -69,7 +70,7 @@
   },
   "scripts": {
     "start": "cross-env PLUFF_DEBUG=true webpack-dev-server",
-    "build": "npm run -s clean && webpack --colors --progress --bail",
+    "build": "npm run -s clean && ncp README.md dist/README.md && ncp humans.txt dist/humans.txt webpack --colors --progress --bail",
     "clean": "rm -rf dist/**",
     "lint": "eslint . && echo 'Linting succeeded.'",
     "test": "npm run -s lint",
