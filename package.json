@@ -70,11 +70,11 @@
   },
   "scripts": {
     "start": "cross-env PLUFF_DEBUG=true webpack-dev-server",
-    "build": "npm run -s clean && ncp README.md dist/README.md && ncp humans.txt dist/humans.txt webpack --colors --progress --bail",
+    "build": "npm run -s clean && webpack --colors --progress --bail",
     "clean": "rm -rf dist/**",
     "lint": "eslint . && echo 'Linting succeeded.'",
     "test": "npm run -s lint",
     "deploy": "node deploy.js",
-    "deploy-auto": "git pull && npm install && PLUFF_DEBUG=false npm run -s build && npm run -s deploy"
+    "deploy-auto": "git pull && npm install && PLUFF_DEBUG=false npm run -s build && ncp README.md dist/README.md && ncp humans.txt dist/humans.txt && npm run -s deploy"
   }
 }
