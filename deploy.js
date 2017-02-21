@@ -8,14 +8,22 @@ dotenv.load();
 
 var question = {type: 'confirm', name: 'continue', message: 'Are you sure you want to deploy?'};
 var USE_FTP = !!process.env.PLUFF_FTP_HOST;
+var IS_TRAVIS = !!process.env.TRAVIS;
 
-inquirer.prompt(question).then(function(answers) {
-  if (answers.continue) {
-    uploadThatShit();
-  } else {
-    process.exit(1);
-  }
-});
+if(IS_TRAVIS)
+{
+  uploadThatShit();
+}
+else
+{
+  inquirer.prompt(question).then(function(answers) {
+    if (answers.continue) {
+      uploadThatShit();
+    } else {
+      process.exit(1);
+    }
+  });
+}
 
 function uploadThatShit() {
   if (USE_FTP) {
@@ -34,6 +42,7 @@ function uploadWithFtp() {
     user: process.env.PLUFF_FTP_USER,
     password: process.env.PLUFF_FTP_PASSWORD,
     parallel: 10,
+    secure: true,
     log: console.log,
   });
 
