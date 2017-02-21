@@ -1,32 +1,39 @@
 Pluff — Studentenrooster [![Build Status](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff.svg?branch=master)](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff)
 ========================
 
-[Pluff](https://pluff.nl) is een open-source roostersysteem, gemaakt door Fontys ICT studenten. Het is onze visie, hoe het eigenlijk zou moeten. Het systeem dat door Fontys ICT zelf aangeboden wordt, is in onze ogen verouderd. We vinden het eruit zien en werken alsof het in de jaren '80 is gemaakt door een stelletje communisten. Kom op. Framesets, Comic Sans en zelfs GIF-jes met glitters. No joke.
+[Pluff](https://pluff.venus.fhict.nl) is een open-source roostersysteem, gemaakt door Fontys ICT studenten. Het is onze visie, hoe het eigenlijk zou moeten. De webpagina's uit het gebruikte roosterpakket, zijn niet echt van deze tijd.
 
 Uiteraard kan het altijd beter. Wij zijn geïnteresseerd in je feedback! Aarzel niet om hiervoor een issue aan te maken. Meehelpen is ook zeer welkom.
 
 ## Development
 
-Om Pluff lokaal te draaien heb je [node.js](http://nodejs.org/) en _node package manager_ (meestal meegeleverd bij node.js) nodig.
+Om Pluff lokaal te draaien heb je [node.js](http://nodejs.org/) (v6 of hoger) en npm (meestal meegeleverd bij node.js) nodig.
 
-Clone deze repository en kopieer `.env.example` naar `.env`. Type (eenmalig) in je Pluff folder `npm install` om de benodigde dependencies te installeren. Daarna type je simpelweg `npm start` om de ‘server’ te starten. Ga nu naar `http://localhost:8080`, waar je als het goed is meteen een werkende Pluff ziet staan.
+Clone deze repository. Type (eenmalig) in je Pluff folder `npm install` om de benodigde dependencies te installeren. Daarna type je simpelweg `npm start` om de ‘server’ te starten. Ga nu naar `http://localhost:8080`, waar je als het goed is meteen een werkende Pluff ziet staan.
 
 Houd je bij het ontwikkelen aan de  [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Check of je voldoet aan deze standaard met `npm run lint`. Ook wordt [EditorConfig](http://editorconfig.org/) gebruikt zodat iedereen dezelfde line endings etc. gebruikt. Deze kun je voor vrijwel elke editor installeren.
+
+## Nieuwe feature?
+
+Heb je een nieuwe feature gemaakt, die je graag met de rest van de wereld wil delen? Stuur ons een pull-request van je nieuwe code. Wij zullen dit pull-request vervolgens in onze `dev` branch zetten zodat we het online kunnen testen op [pluff-dev](https://pluff-dev.venus.fhict.nl). Eens in de zoveel tijd zullen we al deze nieuwe features dan op de `master` zetten.
 
 ## Uploaden via FTP
 
 Om Pluff op een website te plaatsen, kopieer je eerst `.env.example` naar `.env`. Vul vervolgens je FTP gegevens hier in. Daarna kun je de bestanden bouwen en uploaden op je FTP server door `npm run deploy-auto` uit te voeren.
 
+Inmiddels wordt er gebruikt gemaakt van Travis om automatisch de laatste commit op de master te deployen naar de [pluff website](https://pluff.venus.fhict.nl).
+
 ## Credits
 
 De mensen achter Pluff:
 
-- [Kees Kluskens](https://www.webduck.nl) - Ontwikkelaar en meesterbrein
+- [Kees Kluskens](https://www.webduck.nl) - Founder (bedenker/ontwikkelaar) - Afgestudeerd
 - Tim van den Biggelaar - Ontwikkelaar
 - [Stephan van Rooij](https://svrooij.nl) - Ontwikkelaar FHICT Api
-- [Jeroen](https://www.laylo.nl) - Serverbeheer
+- Jeroen - (oud)Serverbeheer
 - Jasper Stam - _Programmeer schildknaap_
 - Rutger Schimmel - _Bugtester_ & kleurentovenaar
+- [Jort Polderdijk](https://github.com/JortPolderdijk) - Ontwikkelaar
 
 Voor het rooster systeem maken we gebruik van de volgende projecten:
 
