@@ -63,6 +63,9 @@ app.run(($rootScope, apiService) => {
   $rootScope.encode = function (url) {
     return apiService.encode(url);
   };
+  $rootScope.doubleEncode = function (url) {
+    return apiService.encode(apiService.encode(url));
+  };
 });
 
 export default app;

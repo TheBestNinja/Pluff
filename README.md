@@ -1,9 +1,14 @@
 Pluff — Studentenrooster [![Build Status](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff.svg?branch=master)](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff)
 ========================
-
 [Pluff](https://pluff.venus.fhict.nl) is een open-source roostersysteem, gemaakt door Fontys ICT studenten. Het is onze visie, hoe het eigenlijk zou moeten. De webpagina's uit het gebruikte roosterpakket, zijn niet echt van deze tijd.
 
 Uiteraard kan het altijd beter. Wij zijn geïnteresseerd in je feedback! Aarzel niet om hiervoor een issue aan te maken. Meehelpen is ook zeer welkom.
+
+## [Master](https://github.com/Fontys-Hogeschool-ICT/Pluff/tree/master/) [![Build Status](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff.svg?branch=master)](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff)
+This is the main branch, hosted on [pluff.venus.fhict.nl](https://pluff.venus.fhict.nl). It is automatically deployed by Travis, but this branch isn't used for development.
+
+## [Dev branch](https://github.com/Fontys-Hogeschool-ICT/Pluff/tree/dev/) [![Build Status](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff.svg?branch=dev)](https://travis-ci.org/Fontys-Hogeschool-ICT/Pluff)
+This is our development branch, so please submit all your pull-requests to this branch. It is also automatically deployed by travis to [pluff-dev.venus.fhict.nl](https://pluff-dev.venus.fhict.nl). This version of pluff is deployed on every push, so you'll see regular updates.
 
 ## Development
 
