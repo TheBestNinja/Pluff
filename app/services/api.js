@@ -144,7 +144,7 @@ export default function ($http, $auth, $q, ngDialog) {
     },
     // API URL encoding
     encode(url) {
-      return encodeURIComponent(url);
+      return encodeURIComponent(encodeURIComponent(url));
     },
   };
 }
