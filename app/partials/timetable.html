@@ -35,7 +35,7 @@
         <div class="lesson" ng-if="::hour.lessons.length > 0" ng-init="::lesson = hour.lessons[0]; showExtra = false" ng-style="::{ background: lesson.color }" >
           <div class="lesson-text">
             {{::lesson.start}} - {{::lesson.end}}<br>
-            <a href="search/subject/{{::encode(lesson.subject)}}">{{::lesson.subject}}</a>
+            <a href="search/subject/{{::doubleEncode(lesson.subject)}}">{{::lesson.subject}}</a>
 
             <span ng-if="::lesson.teacher.personalTitle !== '-'">
               - <a ng-click="teacherDialog(lesson.teacher)" title="{{::lesson.teacher.displayName}}">{{::lesson.teacher.personalTitle}}</a>
@@ -47,11 +47,11 @@
 
             <small class="lesson-room-class">
               <span ng-if="::lesson.room !== ''">
-                <a href="search/room/{{::encode(lesson.room)}}">{{::lesson.room}}</a> -
+                <a href="search/room/{{::doubleEncode(lesson.room)}}">{{::lesson.room}}</a> -
               </span>
 
               <span ng-repeat="class in lesson.classes">
-                <a href="search/class/{{::encode(class)}}">{{::class}}</a>{{ (!$last) ? ',' : ''}}
+                <a href="search/class/{{::doubleEncode(class)}}">{{::class}}</a>{{ (!$last) ? ',' : ''}}
               </span>
             </small>
           </div><!-- .lesson-text -->
@@ -61,7 +61,7 @@
             <div class="hidden-lessons" ng-show="showExtra" ng-mouseenter="showExtra = true" ng-mouseleave="showExtra = false">
               <div ng-repeat="lesson in hour.lessons" ng-show="!$first">
                 <div class="lesson-text">
-                  <a href="search/subject/{{::encode(lesson.subject)}}">{{::lesson.subject}}</a>
+                  <a href="search/subject/{{::doubleEncode(lesson.subject)}}">{{::lesson.subject}}</a>
 
                   <span ng-if="::lesson.teacher.personalTitle !== '-'">
                     - <a ng-click="teacherDialog(lesson.teacher)" title="{{::lesson.teacher.displayName}}">{{::lesson.teacher.personalTitle}}</a>
@@ -69,11 +69,11 @@
 
                   <small>
                     <span ng-if="::lesson.room !== ''">
-                      <a href="search/room/{{::encode(lesson.room)}}">{{::lesson.room}}</a> -
+                      <a href="search/room/{{::doubleEncode(lesson.room)}}">{{::lesson.room}}</a> -
                     </span>
 
                     <span ng-repeat="class in lesson.classes">
-                      <a href="search/class/{{::encode(class)}}">{{::class}}</a>{{ (!$last) ? ',' : ''}}
+                      <a href="search/class/{{::doubleEncode(class)}}">{{::class}}</a>{{ (!$last) ? ',' : ''}}
                     </span>
                   </small>
                 </div>
