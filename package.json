@@ -75,6 +75,6 @@
     "lint": "eslint . && echo 'Linting succeeded.'",
     "test": "npm run -s lint",
     "deploy": "node deploy.js",
-    "deploy-auto": "git pull && npm install && PLUFF_DEBUG=false npm run -s build && ncp README.md dist/README.md && ncp humans.txt dist/humans.txt && npm run -s deploy"
+    "deploy-auto": "git pull && npm install && PLUFF_DEBUG=false npm run -s build && ncp README.md dist/README.md && ncp humans.txt dist/humans.txt && ncp iis_web.config dist/web.config && npm run -s deploy"
   }
 }
