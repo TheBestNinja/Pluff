@@ -3,7 +3,7 @@
 if [[ "$TRAVIS_BRANCH" == "dev" ]]; then
   echo "Deploying for development"
   export PLUFF_FTP_DIST=$PLUFF_FTP_DIST_DEV
-  npm run deploy-auto
+  npm run deploy
 fi
 
 if [[ "$TRAVIS_BRANCH" == "master" ]]; then
@@ -11,4 +11,3 @@ if [[ "$TRAVIS_BRANCH" == "master" ]]; then
   export PLUFF_FTP_DIST=$PLUFF_FTP_DIST_PROD
   npm run deploy-auto
 fi
-
