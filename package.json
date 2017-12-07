@@ -69,7 +69,7 @@
     "webpack-dev-server": "^2.2.0"
   },
   "scripts": {
-    "start": "cross-env PLUFF_DEBUG=true webpack-dev-server",
+    "start": "cross-env PLUFF_DEBUG=false webpack-dev-server",
     "build": "npm run -s clean && webpack --colors --progress --bail",
     "clean": "rm -rf dist/**",
     "lint": "eslint . && echo 'Linting succeeded.'",
