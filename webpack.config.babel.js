@@ -107,5 +107,6 @@ export default {
   devServer: {
     stats: 'errors-only',
     historyApiFallback: true,
+    disableHostCheck: true,
   },
 };
