@@ -19,6 +19,10 @@
       color: $primary-color;
     }
   }
+
+  @media screen and (max-width: $samsung) {
+    font-size: 1em;
+  }
 }
 
 .week-previous,
