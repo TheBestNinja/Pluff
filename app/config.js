@@ -2,7 +2,7 @@ import enLang from 'lang/en.json';
 import deLang from 'lang/de.json';
 import nlLang from 'lang/nl.json';
 
-export default function ($translateProvider, $cookieStoreProvider, $authProvider) {
+export default function ($translateProvider, $authProvider) {
   $translateProvider.translations('en', enLang);
   $translateProvider.translations('de', deLang);
   $translateProvider.translations('nl', nlLang);
