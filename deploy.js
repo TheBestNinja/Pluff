@@ -41,7 +41,7 @@ function uploadWithFtp() {
     host: process.env.PLUFF_FTP_HOST,
     user: process.env.PLUFF_FTP_USER,
     password: process.env.PLUFF_FTP_PASSWORD,
-    parallel: 10,
+    parallel: 3,
     secure: true,
     log: console.log,
   });
